@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>dojo test page</title>
+		<link rel="stylesheet" href="dojo/resources/dojo.css" type="text/css">
+		<script>
+			dojoConfig = {
+				async: 1,
+				baseUrl: '.',
+				packages: [
+					'dojo',
+					'dijit',
+					'app'
+				],
+				deps: ['app/App', 'dojo/domReady!'],
+				callback: function (App) {
+					var app = new App({}, 'app');
+					app.startup();
+				}
+			};
+		</script>
+		<script type="text/javascript" src="dojo/dojo.js"></script>
+	</head>
+
+	<body>
+		<h1>dojo test page</h1>
+		<div id="app"></div>
+	</body>
+</html>
